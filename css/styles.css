@@ -28,6 +28,7 @@ img{
     --pressed-state-color:#404BBF;
     --active-navigation-color:#9747FF;
     --cards-gap:24px;
+    --customers-color:#8E8F99; 
 }
 
 .container{
@@ -128,10 +129,20 @@ a {
 /* MAIN PAGE */
 
 .hero {
+    max-width: 1440px;
+    margin: 0 auto;
     background-color: var(--title-color);
     padding: 188px 0 188px 0;
-    justify-content: center;
+    justify-content: center; 
+    background-image:
+    linear-gradient(rgba(46, 47, 66, 0.7), 
+    rgba(46, 47, 66, 0.7)),
+    url(../images/people-office\ 1-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
+
 
 .title-hero {
     font-weight: 700;
@@ -194,9 +205,22 @@ a {
     gap: var(--cards-gap);
 }
 .list-features-item{
-  flex-basis: calc((100% - 3 * var(--cards-gap))/ 4) ;
+  width: calc((100% - 3 * var(--cards-gap))/ 4) ;
 }
-
+.link-icon{
+    width: 264px;
+    height: 112px;
+    background-color: var(--light-cloud-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    
+}
+.icon{
+    width:64px;
+    height: 64px;
+}
 .subject {
     font-weight: 500;
     font-size: 20px;
@@ -291,6 +315,86 @@ a {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+    margin-bottom: 8px;
+}
+.list-soc {
+ display: flex;
+ justify-content: center;
+ gap: var(--cards-gap);
+}
+.link-soc-item {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: var(--primary-brand-color);
+   display: block; 
+   
+}
+.link-soc-icon {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--light-cloud-color);
+   
+}
+.soc-icon{
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+ 
+/* Customers */
+.customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.title-customers{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11; /* 40/36 */
+/* identical to box height, or 111% */
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--title-color);
+    margin-bottom: 72px;
+}
+.list-customers {
+    display: flex;
+    justify-content: center;
+    gap: var(--cards-gap);
+    
+   
+}
+.link-customers-item {
+    width: calc((100% - 5 * var(--cards-gap))/ 6);
+    height: 88px;
+    display: block;
+}
+.link-customers-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid var(--customers-color);
+    color: var(--customers-color);
+}
+.customers-icon {
+    width: 104px;
+    height: 56px;
+    fill: currentColor;
+}
+.link-customers-icon:hover {
+    border-color: var(--primary-brand-color);
+    color: var(--primary-brand-color);
+}
+.link-customers-icon:focus {
+    border-color: var(--primary-brand-color);
+    color: var(--primary-brand-color);
 }
 
 /* FOOTER */
@@ -314,6 +418,57 @@ a {
     line-height: 1.5; /* 24/16 */
    
 }
+
+.container-socmedia{
+    padding-left: 120px;
+}
+.container-footer{
+    display: flex;
+}
+.title-footer-soc {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5; /* 24/16 */
+/* identical to box height, or 150% */
+    letter-spacing: 0.02em;
+    color: var(--background-color);
+    margin-bottom: 16px;
+}
+.list-footer-soc {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    
+}
+.link-footer-soc-item {
+   width: 40px;
+   height:40px;
+   display: block;
+   border-radius: 50%;
+   background-color:var(--primary-brand-color);
+
+}
+.link-footer-soc-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-cloud-color);
+}
+.footer-soc {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+.link-footer-soc-item:hover  {
+    background-color: #31D0AA;
+}
+.link-footer-soc-item:focus {
+   background-color: #31D0AA; 
+}
+
 /* PORTFOLIO PAGE */
 .portfolio-section{
     padding-top: 96px;
