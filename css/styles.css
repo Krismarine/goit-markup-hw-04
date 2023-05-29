@@ -69,8 +69,11 @@ a {
 
 
 .header{
-    border: 1px solid transparent;
-    border-bottom-color: var(--borders-accent-color);
+    /* border: 1px solid transparent;
+    border-bottom-color: var(--borders-accent-color);  */
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .container-nav{
@@ -137,10 +140,10 @@ a {
     background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), 
     rgba(46, 47, 66, 0.7)),
-    url(../images/people-office\ 1-2.jpg);
+    url(../images/people-office.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
 }
 
 
@@ -214,6 +217,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
     margin-bottom: 8px;
     
 }
@@ -290,7 +294,10 @@ a {
     margin-right: var(--cards-gap);
     width: calc((100% - 3 * var(--cards-gap))/ 4);
     border-radius:0 0 4px 4px;
-    box-shadow: 0 1px 1px 0 var(--title-color);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
 }
 .list-team-item:last-child{
     margin-right: 0;
@@ -325,8 +332,6 @@ a {
 .link-soc-item {
    width: 40px;
    height: 40px;
-   border-radius: 50%;
-   background-color: var(--primary-brand-color);
    display: block; 
    
 }
@@ -337,14 +342,18 @@ a {
    justify-content: center;
    align-items: center;
    color: var(--light-cloud-color);
-   
+   border-radius: 50%;
+   background-color: var(--primary-brand-color);
 }
 .soc-icon{
-    width: 16px;
-    height: 16px;
     fill: currentColor;
 }
- 
+.link-soc-icon:hover{
+    background-color: var(--pressed-state-color);
+}
+.link-soc-icon:focus{
+    background-color: var(--pressed-state-color);
+}
 /* Customers */
 .customers {
     padding-top: 120px;
@@ -384,17 +393,15 @@ a {
     color: var(--customers-color);
 }
 .customers-icon {
-    width: 104px;
-    height: 56px;
     fill: currentColor;
 }
 .link-customers-icon:hover {
-    border-color: var(--primary-brand-color);
-    color: var(--primary-brand-color);
+    border-color: var(--pressed-state-color);
+    color: var(--pressed-state-color);
 }
 .link-customers-icon:focus {
-    border-color: var(--primary-brand-color);
-    color: var(--primary-brand-color);
+    border-color: var(--pressed-state-color);
+    color: var(--pressed-state-color);
 }
 
 /* FOOTER */
@@ -403,6 +410,13 @@ a {
     background-color: var(--title-color);
     padding-top: 100px;
     padding-bottom: 100px;
+}
+.container-footer{
+    display: flex;
+    align-items: baseline;
+}
+.container-footer-logo{
+    margin-right: 120px;
 }
 .link-footer-logo{
     display: inline-block;
@@ -419,12 +433,7 @@ a {
    
 }
 
-.container-socmedia{
-    padding-left: 120px;
-}
-.container-footer{
-    display: flex;
-}
+
 .title-footer-soc {
     font-style: normal;
     font-weight: 500;
@@ -445,9 +454,6 @@ a {
    width: 40px;
    height:40px;
    display: block;
-   border-radius: 50%;
-   background-color:var(--primary-brand-color);
-
 }
 .link-footer-soc-icon {
     width: 100%;
@@ -455,17 +461,17 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    background-color:var(--primary-brand-color);
     color: var(--light-cloud-color);
 }
 .footer-soc {
-    width: 24px;
-    height: 24px;
     fill: currentColor;
 }
-.link-footer-soc-item:hover  {
+.link-footer-soc-icon:hover  {
     background-color: #31D0AA;
 }
-.link-footer-soc-item:focus {
+.link-footer-soc-icon:focus {
    background-color: #31D0AA; 
 }
 
@@ -500,6 +506,9 @@ a {
     color: var(--background-color);
     cursor: pointer;
     border: 1px solid transparent;
+    box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.12)
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08),
+    0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .product-set {
@@ -521,6 +530,15 @@ a {
 .product-item:nth-child(3n){
     margin-right: 0;
 }
+.link-product{
+    display: block;
+}
+.link-product:hover, .link-product:focus {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
 .title-product {
    font-weight: 500;
     font-size: 20px;
